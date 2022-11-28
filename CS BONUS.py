@@ -1,0 +1,5 @@
+first_name = input("Please give a name. ")
+generic_location = input("Please give a location. ")
+whole_number = input("Please give a whole number. ")
+plural_noun = input("Please give a plural noun. ")
+print(first_name + " went to " + generic_location + " to buy " + whole_number + " different types of " + plural_noun + ".")
