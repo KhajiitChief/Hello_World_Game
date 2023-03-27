@@ -1,6 +1,10 @@
+import plistlib
+
+
 class Inventory():
     def __init__(self):
-        self.items = {}
+        itemlist = {}
+        self.items = itemlist
 
     def append(self, item):
         self.items[item.name] = item
@@ -8,10 +12,12 @@ class Inventory():
             item.count = item.count + 1
         return item.count
 
-    def remove(self, item):
-        self.items[item.name] = item
-        if item.name in self.items:
-            item.count = item.count - 1
+    def remove(self, item):pass
+#        self.items[item.name] = item
+#        if item.name in self.items:
+#            item.count = item.count - 1
+#            if item.count <= 0:
+#                del itemlist[item]
 
     def __str__(self):
         print("""-----------------------------------
@@ -61,7 +67,3 @@ steel_sword = Items(name="Steel Sword   ", attack= 25, block= .03, use= "Steel S
 special_sword = Items(name="Simple Stick  ", attack= 40, block= .1, use= "A Stick?")
 
 gold = Items()
-inventory.append(wood_sword)
-print(inventory)
-inventory.remove(wood_sword)
-print(inventory)

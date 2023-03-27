@@ -14,10 +14,12 @@ class Hero:
         self.health = kwargs["health"] if "health" in kwargs else 5
         self.protection = kwargs["protection"] if "protection" in kwargs else 0
         self.damage = kwargs["damage"] if "damage" in kwargs else 3
+        self.skill = kwargs["skill"] if "skill" in kwargs else 0
 
     def attack(self, value, dType = "Future"):
         value = self.damage
         total = value + self.skill
+        return total
 
     def hit(self, ALv, ACH, dType = "Future"):
         DLv = self.cLvl
@@ -63,6 +65,9 @@ class Hero:
         if not self.alive():
             self.die()
 
+if __name__ == "__main__":
 
-char = Hero(health= 10)
-print(char.__dict__)
+    char = Hero(health= 10, )
+    chance_hit = char.recieve_attack(1, .5, 8)
+    print(chance_hit)
+    print(char.__dict__)

@@ -661,9 +661,9 @@ while True:
         exit("Well then be gone with you!!!")
     elif start == "yes":
         print("Welcome new player...")
-        print("You need to start the reactor to begin...")
+        print("You need to start the reactor...")
         print("Type where you wish to go and what you wish to do...")
-        print("If you need HELP just ask...")
+        print("Let the game begin...")
         house()
     else:
         print("Please use YES or NO...")
